@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		E6DDA2CD216C603900D5542F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA2CC216C603900D5542F /* AppDelegate.swift */; };
-		E6DDA2CF216C603900D5542F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA2CE216C603900D5542F /* ViewController.swift */; };
-		E6DDA2D2216C603900D5542F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6DDA2D0216C603900D5542F /* Main.storyboard */; };
 		E6DDA2D4216C603A00D5542F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6DDA2D3216C603A00D5542F /* Assets.xcassets */; };
 		E6DDA2D7216C603B00D5542F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6DDA2D5216C603B00D5542F /* LaunchScreen.storyboard */; };
 		E6DDA2E2216C603B00D5542F /* BridjTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA2E1216C603B00D5542F /* BridjTests.swift */; };
+		E6DDA2ED216C650000D5542F /* EvenListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA2EC216C650000D5542F /* EvenListViewController.swift */; };
+		E6DDA2F2216C653900D5542F /* EvenListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6DDA2F1216C653900D5542F /* EvenListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +28,14 @@
 /* Begin PBXFileReference section */
 		E6DDA2C9216C603900D5542F /* Bridj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bridj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6DDA2CC216C603900D5542F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E6DDA2CE216C603900D5542F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E6DDA2D1216C603900D5542F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E6DDA2D3216C603A00D5542F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6DDA2D6216C603B00D5542F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6DDA2D8216C603B00D5542F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6DDA2DD216C603B00D5542F /* BridjTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BridjTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6DDA2E1216C603B00D5542F /* BridjTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridjTests.swift; sourceTree = "<group>"; };
 		E6DDA2E3216C603B00D5542F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6DDA2EC216C650000D5542F /* EvenListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenListViewController.swift; sourceTree = "<group>"; };
+		E6DDA2F1216C653900D5542F /* EvenListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvenListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				E6DDA2CC216C603900D5542F /* AppDelegate.swift */,
-				E6DDA2CE216C603900D5542F /* ViewController.swift */,
-				E6DDA2D0216C603900D5542F /* Main.storyboard */,
+				E6DDA2EE216C650A00D5542F /* Presentation */,
 				E6DDA2D3216C603A00D5542F /* Assets.xcassets */,
 				E6DDA2D5216C603B00D5542F /* LaunchScreen.storyboard */,
 				E6DDA2D8216C603B00D5542F /* Info.plist */,
@@ -94,6 +93,31 @@
 				E6DDA2E3216C603B00D5542F /* Info.plist */,
 			);
 			path = BridjTests;
+			sourceTree = "<group>";
+		};
+		E6DDA2EE216C650A00D5542F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E6DDA2EF216C651500D5542F /* Scenes */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		E6DDA2EF216C651500D5542F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E6DDA2F0216C651E00D5542F /* EventList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E6DDA2F0216C651E00D5542F /* EventList */ = {
+			isa = PBXGroup;
+			children = (
+				E6DDA2EC216C650000D5542F /* EvenListViewController.swift */,
+				E6DDA2F1216C653900D5542F /* EvenListViewController.xib */,
+			);
+			path = EventList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +201,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6DDA2F2216C653900D5542F /* EvenListViewController.xib in Resources */,
 				E6DDA2D7216C603B00D5542F /* LaunchScreen.storyboard in Resources */,
 				E6DDA2D4216C603A00D5542F /* Assets.xcassets in Resources */,
-				E6DDA2D2216C603900D5542F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +221,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6DDA2CF216C603900D5542F /* ViewController.swift in Sources */,
 				E6DDA2CD216C603900D5542F /* AppDelegate.swift in Sources */,
+				E6DDA2ED216C650000D5542F /* EvenListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +245,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E6DDA2D0216C603900D5542F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E6DDA2D1216C603900D5542F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E6DDA2D5216C603B00D5542F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

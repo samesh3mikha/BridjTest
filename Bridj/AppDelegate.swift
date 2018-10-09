@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        setupRootViewController()
         return true
     }
 
@@ -41,6 +41,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    // MARK: - Private Helper
+    
+    private func setupRootViewController() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let viewController = EvenListViewController(nibName: nil, bundle: Bundle(for: EvenListViewController.self))
+        let navigationController = UINavigationController(rootViewController: viewController)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+    }
 }
 
