@@ -13,6 +13,9 @@
 		E6DDA2E2216C603B00D5542F /* BridjTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA2E1216C603B00D5542F /* BridjTests.swift */; };
 		E6DDA2ED216C650000D5542F /* EvenListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA2EC216C650000D5542F /* EvenListViewController.swift */; };
 		E6DDA2F2216C653900D5542F /* EvenListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6DDA2F1216C653900D5542F /* EvenListViewController.xib */; };
+		E6DDA2F7216C6AEA00D5542F /* ServiceRequestComponet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA2F6216C6AEA00D5542F /* ServiceRequestComponet.swift */; };
+		E6DDA2F9216C6C3B00D5542F /* ServiceRequestToUrlMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA2F8216C6C3B00D5542F /* ServiceRequestToUrlMapping.swift */; };
+		E6DDA2FB216C71FD00D5542F /* ServiceRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA2FA216C71FD00D5542F /* ServiceRequestHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		E6DDA2E3216C603B00D5542F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6DDA2EC216C650000D5542F /* EvenListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenListViewController.swift; sourceTree = "<group>"; };
 		E6DDA2F1216C653900D5542F /* EvenListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvenListViewController.xib; sourceTree = "<group>"; };
+		E6DDA2F6216C6AEA00D5542F /* ServiceRequestComponet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestComponet.swift; sourceTree = "<group>"; };
+		E6DDA2F8216C6C3B00D5542F /* ServiceRequestToUrlMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestToUrlMapping.swift; sourceTree = "<group>"; };
+		E6DDA2FA216C71FD00D5542F /* ServiceRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 			children = (
 				E6DDA2CC216C603900D5542F /* AppDelegate.swift */,
 				E6DDA2EE216C650A00D5542F /* Presentation */,
+				E6DDA2F3216C6A8F00D5542F /* Data */,
 				E6DDA2D3216C603A00D5542F /* Assets.xcassets */,
 				E6DDA2D5216C603B00D5542F /* LaunchScreen.storyboard */,
 				E6DDA2D8216C603B00D5542F /* Info.plist */,
@@ -118,6 +125,24 @@
 				E6DDA2F1216C653900D5542F /* EvenListViewController.xib */,
 			);
 			path = EventList;
+			sourceTree = "<group>";
+		};
+		E6DDA2F3216C6A8F00D5542F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E6DDA2F4216C6AB400D5542F /* Shared */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E6DDA2F4216C6AB400D5542F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E6DDA2F6216C6AEA00D5542F /* ServiceRequestComponet.swift */,
+				E6DDA2F8216C6C3B00D5542F /* ServiceRequestToUrlMapping.swift */,
+				E6DDA2FA216C71FD00D5542F /* ServiceRequestHandler.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +246,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6DDA2F7216C6AEA00D5542F /* ServiceRequestComponet.swift in Sources */,
+				E6DDA2FB216C71FD00D5542F /* ServiceRequestHandler.swift in Sources */,
 				E6DDA2CD216C603900D5542F /* AppDelegate.swift in Sources */,
+				E6DDA2F9216C6C3B00D5542F /* ServiceRequestToUrlMapping.swift in Sources */,
 				E6DDA2ED216C650000D5542F /* EvenListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
