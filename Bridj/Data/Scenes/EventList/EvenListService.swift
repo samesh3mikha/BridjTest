@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol EvenListRepository {
+protocol EventListRepository {
     func getEventList(serviceRequestCompletionCallback: @escaping ServiceRequestCompletionCallback)
 }
 
-final class EventListService: EvenListRepository, ServiceRequestHandler {
+final class EventListService: EventListRepository, ServiceRequestHandler {
     
     func getEventList(serviceRequestCompletionCallback: @escaping ServiceRequestCompletionCallback) {
         let evenListRequestComponent = EvenListRequestComponent()
