@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EvenListViewController" customModule="Bridj" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="NaE-ZT-Kv5" id="2ax-mW-eNc"/>
                 <outlet property="view" destination="iN0-l3-epB" id="hjW-cQ-xTs"/>
             </connections>
         </placeholder>
@@ -18,7 +19,23 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="NaE-ZT-Kv5">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="oBg-Nz-glM"/>
+                        <outlet property="delegate" destination="-1" id="ezr-WF-1fS"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="NaE-ZT-Kv5" secondAttribute="bottom" id="50h-Oq-LHD"/>
+                <constraint firstItem="NaE-ZT-Kv5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Uh3-xc-y0K"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NaE-ZT-Kv5" secondAttribute="trailing" id="sht-ed-G5b"/>
+                <constraint firstItem="NaE-ZT-Kv5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uuH-OL-3s8"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="-401" y="-100"/>
         </view>

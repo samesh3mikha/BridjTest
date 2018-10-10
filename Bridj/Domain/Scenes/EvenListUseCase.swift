@@ -11,6 +11,12 @@ import Foundation
 protocol EvenListUseCaseProviding {
     func getEventList(useCaseFailureCallback: @escaping UseCaseFailureCallback,
                       useCaseSuccesCallback: @escaping UseCaseSuccesCallback<Events>)
+    
+    func filterBookableEvents(_ events: [Events.Event]) -> [Events.Event]
+
+    func sortEventsChronologically(_ events: [Events.Event]) -> [Events.Event]
+
+    func filterPlaysFromTheEvents(_ events: [Events.Event]) -> [Events.Event]
 }
 
 final class EvenListUseCase: EvenListUseCaseProviding, DataToDomainMapping {
@@ -31,11 +37,31 @@ final class EvenListUseCase: EvenListUseCaseProviding, DataToDomainMapping {
                       useCaseSuccesCallback: @escaping UseCaseSuccesCallback<Events>) {
         eventListService.getEventList { responseData, error in
             do {
-                let events: Events = try self.domainModelFor(data: responseData, error: error)
-                useCaseSuccesCallback(events)
+                let eventList: Events = try self.domainModelFor(data: responseData, error: error)
+                useCaseSuccesCallback(eventList)
             } catch {
                 useCaseFailureCallback(error)
             }
         }
+    }
+    
+    func filterBookableEvents(_ events: [Events.Event]) -> [Events.Event] {
+        return events.filter { $0.availableSeats > 0 }
+    }
+    
+    func sortEventsChronologically(_ events: [Events.Event]) -> [Events.Event] {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let chronologicalEvents: [Events.Event] = events.sorted(by: {
+            if let date0: Date = dateFormatter.date(from: $0.date), let date1: Date = dateFormatter.date(from: $1.date) {
+                return date0 > date1
+            }
+            return false
+        })
+        return chronologicalEvents
+    }
+    
+    func filterPlaysFromTheEvents(_ events: [Events.Event]) -> [Events.Event] {
+        return events.filter { $0.labels.contains("play") }
     }
 }

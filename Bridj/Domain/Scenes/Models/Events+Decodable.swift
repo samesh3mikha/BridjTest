@@ -23,7 +23,7 @@ extension Events.Event: Decodable {
     private enum CodingKeys: String, CodingKey {
         case name
         case date
-        case availableSeats
+        case availableSeats = "available_seats"
         case price
         case venue
         case labels
@@ -34,7 +34,7 @@ extension Events.Event: Decodable {
         name = try container.decode(String.self, forKey: .name)
         date = try container.decode(String.self, forKey: .date)
         availableSeats = try container.decode(Int.self, forKey: .availableSeats)
-        price = try container.decode(Decimal.self, forKey: .price)
+        price = try container.decode(Double.self, forKey: .price)
         venue = try container.decode(String.self, forKey: .venue)
         labels = try container.decode([String].self, forKey: .labels)
     }

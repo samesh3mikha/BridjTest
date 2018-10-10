@@ -22,6 +22,11 @@
 		E6DDA30E216DA41A00D5542F /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA30D216DA41A00D5542F /* Events.swift */; };
 		E6DDA310216DA6F300D5542F /* Events+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA30F216DA6F200D5542F /* Events+Decodable.swift */; };
 		E6DDA313216DAB1200D5542F /* DataToDomainMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA312216DAB1200D5542F /* DataToDomainMapping.swift */; };
+		E6DDA315216DB88900D5542F /* EvenListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA314216DB88900D5542F /* EvenListConfigurator.swift */; };
+		E6DDA317216DB8F300D5542F /* EvenListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA316216DB8F300D5542F /* EvenListPresenter.swift */; };
+		E6DDA31A216DC40100D5542F /* EventListCellDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA319216DC40100D5542F /* EventListCellDisplayItem.swift */; };
+		E6DDA31E216DC53600D5542F /* DetailedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA31D216DC53600D5542F /* DetailedTableViewCell.swift */; };
+		E6DDA320216DC56900D5542F /* DetailedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6DDA31F216DC56900D5542F /* DetailedTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,11 @@
 		E6DDA30D216DA41A00D5542F /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		E6DDA30F216DA6F200D5542F /* Events+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Events+Decodable.swift"; sourceTree = "<group>"; };
 		E6DDA312216DAB1200D5542F /* DataToDomainMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataToDomainMapping.swift; sourceTree = "<group>"; };
+		E6DDA314216DB88900D5542F /* EvenListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenListConfigurator.swift; sourceTree = "<group>"; };
+		E6DDA316216DB8F300D5542F /* EvenListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenListPresenter.swift; sourceTree = "<group>"; };
+		E6DDA319216DC40100D5542F /* EventListCellDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListCellDisplayItem.swift; sourceTree = "<group>"; };
+		E6DDA31D216DC53600D5542F /* DetailedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTableViewCell.swift; sourceTree = "<group>"; };
+		E6DDA31F216DC56900D5542F /* DetailedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailedTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +128,7 @@
 		E6DDA2EE216C650A00D5542F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E6DDA31B216DC4C700D5542F /* Shared */,
 				E6DDA2EF216C651500D5542F /* Scenes */,
 			);
 			path = Presentation;
@@ -134,8 +145,11 @@
 		E6DDA2F0216C651E00D5542F /* EventList */ = {
 			isa = PBXGroup;
 			children = (
+				E6DDA318216DC3E400D5542F /* Models */,
 				E6DDA2EC216C650000D5542F /* EvenListViewController.swift */,
 				E6DDA2F1216C653900D5542F /* EvenListViewController.xib */,
+				E6DDA314216DB88900D5542F /* EvenListConfigurator.swift */,
+				E6DDA316216DB8F300D5542F /* EvenListPresenter.swift */,
 			);
 			path = EventList;
 			sourceTree = "<group>";
@@ -209,6 +223,31 @@
 				E6DDA312216DAB1200D5542F /* DataToDomainMapping.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		E6DDA318216DC3E400D5542F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E6DDA319216DC40100D5542F /* EventListCellDisplayItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E6DDA31B216DC4C700D5542F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E6DDA31C216DC4D700D5542F /* Cells */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E6DDA31C216DC4D700D5542F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E6DDA31D216DC53600D5542F /* DetailedTableViewCell.swift */,
+				E6DDA31F216DC56900D5542F /* DetailedTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6DDA2F2216C653900D5542F /* EvenListViewController.xib in Resources */,
+				E6DDA320216DC56900D5542F /* DetailedTableViewCell.xib in Resources */,
 				E6DDA2D7216C603B00D5542F /* LaunchScreen.storyboard in Resources */,
 				E6DDA2D4216C603A00D5542F /* Assets.xcassets in Resources */,
 			);
@@ -318,11 +358,15 @@
 				E6DDA30B216DA37C00D5542F /* EvenListUseCase.swift in Sources */,
 				E6DDA2CD216C603900D5542F /* AppDelegate.swift in Sources */,
 				E6DDA306216D9A7100D5542F /* EvenListRequestComponent.swift in Sources */,
+				E6DDA315216DB88900D5542F /* EvenListConfigurator.swift in Sources */,
 				E6DDA30E216DA41A00D5542F /* Events.swift in Sources */,
 				E6DDA2F9216C6C3B00D5542F /* ServiceRequestToUrlMapping.swift in Sources */,
 				E6DDA310216DA6F300D5542F /* Events+Decodable.swift in Sources */,
+				E6DDA31A216DC40100D5542F /* EventListCellDisplayItem.swift in Sources */,
 				E6DDA313216DAB1200D5542F /* DataToDomainMapping.swift in Sources */,
 				E6DDA2ED216C650000D5542F /* EvenListViewController.swift in Sources */,
+				E6DDA31E216DC53600D5542F /* DetailedTableViewCell.swift in Sources */,
+				E6DDA317216DB8F300D5542F /* EvenListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,7 +18,7 @@ struct Events {
         
         let availableSeats: Int
         
-        let price: Decimal
+        let price: Double
         
         let venue: String
         

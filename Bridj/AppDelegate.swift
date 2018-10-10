@@ -45,7 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupRootViewController() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = EvenListViewController(nibName: nil, bundle: Bundle(for: EvenListViewController.self))
+//        let viewController = EvenListViewController(nibName: nil, bundle: Bundle(for: EvenListViewController.self))
+        let viewController = EvenListViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
