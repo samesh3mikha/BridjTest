@@ -1,5 +1,5 @@
 //
-//  EvenListPresenter.swift
+//  EventListPresenter.swift
 //  Bridj
 //
 //  Created by samesh swongamikha on 10/10/18.
@@ -8,34 +8,34 @@
 
 import Foundation
 
-protocol EvenListPresenting {
+protocol EventListPresenting {
     func makeInitialSetup()
     
     func viewDidLoad()
 }
 
-final class EvenListPresenter: EvenListPresenting {
+final class EventListPresenter: EventListPresenting {
     
     /// The view that conforms to the EventListDisplay protocol
     weak var display: EventListDisplay?
 
     /// The use case to fetch event list
-    var evenListUseCase: EvenListUseCaseProviding
+    var eventListUseCase: EventListUseCaseProviding
 
     // MARK: - Lifecycle
     
     init() {
-        self.evenListUseCase = EvenListUseCase()
+        self.eventListUseCase = EventListUseCase()
     }
     
-    // MARK: - Protocol EvenListPresenting
+    // MARK: - Protocol EventListPresenting
     
     func makeInitialSetup() {
         display?.setTitle("Events")
     }
     
     func viewDidLoad() {
-        evenListUseCase.getEventList(useCaseFailureCallback: { error in
+        eventListUseCase.getEventList(useCaseFailureCallback: { error in
             print(error.localizedDescription)
         }, useCaseSuccesCallback: { events in
             let displayItems = self.eventListDisplayItems(eventList: events)
@@ -49,16 +49,16 @@ final class EvenListPresenter: EvenListPresenting {
     
     private func eventListDisplayItems(eventList: Events) -> [EventListDisplayItem] {
         // Filter the events with available seats
-        let bookableEvents: [Events.Event] = self.evenListUseCase.filterBookableEvents(eventList.events)
+        let bookableEvents: [Events.Event] = self.eventListUseCase.filterBookableEvents(eventList.events)
         // Sort the events chronologically
-        let sortedEvents: [Events.Event] = self.evenListUseCase.sortEventsChronologically(bookableEvents)
+        let sortedEvents: [Events.Event] = self.eventListUseCase.sortEventsChronologically(bookableEvents)
         
         // Bookable seats section
         let sortedEventsDisplayItems: [EventListCellDisplayItem] = eventCellDisplayItems(events: sortedEvents)
         let sortedEventList = EventListDisplayItem(sectionTitle: "Events with seats available",
                                                      events: sortedEventsDisplayItems)
         // Plays section
-        let plays: [Events.Event] = self.evenListUseCase.filterPlaysFromTheEvents(sortedEvents)
+        let plays: [Events.Event] = self.eventListUseCase.filterPlaysFromTheEvents(sortedEvents)
         let playsDisplayItems: [EventListCellDisplayItem] = eventCellDisplayItems(events: plays)
         let playsList = EventListDisplayItem(sectionTitle: "Plays",
                                              events: playsDisplayItems)

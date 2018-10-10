@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EvenListViewController" customModule="Bridj" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventListViewController" customModule="Bridj" customModuleProvider="target">
             <connections>
                 <outlet property="tableView" destination="NaE-ZT-Kv5" id="2ax-mW-eNc"/>
                 <outlet property="view" destination="iN0-l3-epB" id="hjW-cQ-xTs"/>

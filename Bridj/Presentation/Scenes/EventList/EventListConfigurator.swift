@@ -1,5 +1,5 @@
 //
-//  EvenListConfigurator.swift
+//  EventListConfigurator.swift
 //  Bridj
 //
 //  Created by samesh swongamikha on 10/10/18.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-final class EvenListConfigurator {
+final class EventListConfigurator {
     
     // MARK: Properties
     
-    static let shared = EvenListConfigurator()
+    static let shared = EventListConfigurator()
     
     // MARK: Lifecycle
     
@@ -20,8 +20,8 @@ final class EvenListConfigurator {
     
     // MARK: Configuration
     
-    func configure(_ viewController: EvenListViewController) {
-        let presenter = EvenListPresenter()
+    func configure(_ viewController: EventListViewController) {
+        let presenter = EventListPresenter()
         presenter.display = viewController
         viewController.presenter = presenter
     }

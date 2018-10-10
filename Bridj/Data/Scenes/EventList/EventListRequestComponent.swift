@@ -1,5 +1,5 @@
 //
-//  EvenListRequestComponent.swift
+//  EventListRequestComponent.swift
 //  Bridj
 //
 //  Created by samesh swongamikha on 10/10/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct EvenListRequestComponent: ServiceRequestComponet {
+struct EventListRequestComponent: ServiceRequestComponet {
     var method: HttpMethod {
         return .get
     }

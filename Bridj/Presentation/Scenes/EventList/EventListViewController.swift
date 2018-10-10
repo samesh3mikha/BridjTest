@@ -1,5 +1,5 @@
 //
-//  EvenListViewController.swift
+//  EventListViewController.swift
 //  Bridj
 //
 //  Created by samesh swongamikha on 10/9/18.
@@ -15,10 +15,10 @@ protocol EventListDisplay: class {
     func displayItems(_ items: [EventListDisplayItem])
 }
 
-final class EvenListViewController: UIViewController, EventListDisplay, UITableViewDataSource, UITableViewDelegate {
+final class EventListViewController: UIViewController, EventListDisplay, UITableViewDataSource, UITableViewDelegate {
 
-    /// The presenter object conforming to EvenListPresenting, to perform the actions of the scene
-    var presenter: EvenListPresenting!
+    /// The presenter object conforming to EventListPresenting, to perform the actions of the scene
+    var presenter: EventListPresenting!
 
     // MARK: - Outlets
     
@@ -37,12 +37,12 @@ final class EvenListViewController: UIViewController, EventListDisplay, UITableV
     }
     
     required init() {
-        super.init(nibName: nil, bundle: Bundle(for: EvenListViewController.self))
+        super.init(nibName: nil, bundle: Bundle(for: EventListViewController.self))
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        EvenListConfigurator.shared.configure(self)
+        EventListConfigurator.shared.configure(self)
         registerReusableTableViewCells()
         presenter.makeInitialSetup()
         presenter.viewDidLoad()

@@ -1,5 +1,5 @@
 //
-//  EvenListUseCase.swift
+//  EventListUseCase.swift
 //  Bridj
 //
 //  Created by samesh swongamikha on 10/10/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol EvenListUseCaseProviding {
+protocol EventListUseCaseProviding {
     func getEventList(useCaseFailureCallback: @escaping UseCaseFailureCallback,
                       useCaseSuccesCallback: @escaping UseCaseSuccesCallback<Events>)
     
@@ -19,7 +19,7 @@ protocol EvenListUseCaseProviding {
     func filterPlaysFromTheEvents(_ events: [Events.Event]) -> [Events.Event]
 }
 
-final class EvenListUseCase: EvenListUseCaseProviding, DataToDomainMapping {
+final class EventListUseCase: EventListUseCaseProviding, DataToDomainMapping {
     
     // MARK: - Properties
 
@@ -31,7 +31,7 @@ final class EvenListUseCase: EvenListUseCaseProviding, DataToDomainMapping {
         eventListService = EventListService()
     }
     
-    // MARK: - Protocol EvenListUseCaseProviding
+    // MARK: - Protocol EventListUseCaseProviding
 
     func getEventList(useCaseFailureCallback: @escaping UseCaseFailureCallback,
                       useCaseSuccesCallback: @escaping UseCaseSuccesCallback<Events>) {

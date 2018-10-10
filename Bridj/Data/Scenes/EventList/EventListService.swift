@@ -1,5 +1,5 @@
 //
-//  EvenListService.swift
+//  EventListService.swift
 //  Bridj
 //
 //  Created by samesh swongamikha on 10/10/18.
@@ -15,8 +15,8 @@ protocol EventListRepository {
 final class EventListService: EventListRepository, ServiceRequestHandler {
     
     func getEventList(serviceRequestCompletionCallback: @escaping ServiceRequestCompletionCallback) {
-        let evenListRequestComponent = EvenListRequestComponent()
-        performServiceRequest(evenListRequestComponent) { responseData, error in
+        let eventListRequestComponent = EventListRequestComponent()
+        performServiceRequest(eventListRequestComponent) { responseData, error in
             serviceRequestCompletionCallback(responseData, error)
         }
     }
