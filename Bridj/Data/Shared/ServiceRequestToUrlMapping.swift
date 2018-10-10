@@ -15,7 +15,7 @@ protocol ServiceToUrlRequestMapping {
     var baseUrl: URL { get }
     
     /// Builds urlRequest with provide serviceRequest: method, path, params,
-    func urlRequestFor(serviceRequest: ServiceRequestComponet) throws -> URLRequest
+    func urlRequestFor(serviceRequestComponet: ServiceRequestComponet) throws -> URLRequest
 }
 
 extension ServiceToUrlRequestMapping {

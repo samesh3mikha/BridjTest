@@ -16,6 +16,8 @@
 		E6DDA2F7216C6AEA00D5542F /* ServiceRequestComponet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA2F6216C6AEA00D5542F /* ServiceRequestComponet.swift */; };
 		E6DDA2F9216C6C3B00D5542F /* ServiceRequestToUrlMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA2F8216C6C3B00D5542F /* ServiceRequestToUrlMapping.swift */; };
 		E6DDA2FB216C71FD00D5542F /* ServiceRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA2FA216C71FD00D5542F /* ServiceRequestHandler.swift */; };
+		E6DDA306216D9A7100D5542F /* EvenListRequestComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA304216D9A7100D5542F /* EvenListRequestComponent.swift */; };
+		E6DDA307216D9A7100D5542F /* EvenListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DDA305216D9A7100D5542F /* EvenListService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		E6DDA2F6216C6AEA00D5542F /* ServiceRequestComponet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestComponet.swift; sourceTree = "<group>"; };
 		E6DDA2F8216C6C3B00D5542F /* ServiceRequestToUrlMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestToUrlMapping.swift; sourceTree = "<group>"; };
 		E6DDA2FA216C71FD00D5542F /* ServiceRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestHandler.swift; sourceTree = "<group>"; };
+		E6DDA304216D9A7100D5542F /* EvenListRequestComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvenListRequestComponent.swift; sourceTree = "<group>"; };
+		E6DDA305216D9A7100D5542F /* EvenListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvenListService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 		E6DDA2F3216C6A8F00D5542F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E6DDA302216D9A3500D5542F /* Scenes */,
 				E6DDA2F4216C6AB400D5542F /* Shared */,
 			);
 			path = Data;
@@ -143,6 +148,23 @@
 				E6DDA2FA216C71FD00D5542F /* ServiceRequestHandler.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		E6DDA302216D9A3500D5542F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E6DDA303216D9A4800D5542F /* EventList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E6DDA303216D9A4800D5542F /* EventList */ = {
+			isa = PBXGroup;
+			children = (
+				E6DDA304216D9A7100D5542F /* EvenListRequestComponent.swift */,
+				E6DDA305216D9A7100D5542F /* EvenListService.swift */,
+			);
+			path = EventList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,7 +270,9 @@
 			files = (
 				E6DDA2F7216C6AEA00D5542F /* ServiceRequestComponet.swift in Sources */,
 				E6DDA2FB216C71FD00D5542F /* ServiceRequestHandler.swift in Sources */,
+				E6DDA307216D9A7100D5542F /* EvenListService.swift in Sources */,
 				E6DDA2CD216C603900D5542F /* AppDelegate.swift in Sources */,
+				E6DDA306216D9A7100D5542F /* EvenListRequestComponent.swift in Sources */,
 				E6DDA2F9216C6C3B00D5542F /* ServiceRequestToUrlMapping.swift in Sources */,
 				E6DDA2ED216C650000D5542F /* EvenListViewController.swift in Sources */,
 			);

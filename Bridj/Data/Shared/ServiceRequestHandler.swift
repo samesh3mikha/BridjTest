@@ -19,7 +19,7 @@ extension ServiceRequestHandler {
     func performServiceRequest(_ serviceRequest: ServiceRequestComponet,
                                serviceRequestCompletionCallback: @escaping ServiceRequestCompletionCallback) {
         do {
-            let urlRequest = try urlRequestFor(serviceRequest: serviceRequest)
+            let urlRequest = try urlRequestFor(serviceRequestComponet: serviceRequest)
             let task = URLSession.shared.dataTask(with: urlRequest as URLRequest) { data, _, error in
                 serviceRequestCompletionCallback(data, error)
             }
